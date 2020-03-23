@@ -28,7 +28,7 @@ export const checkIfBirthdayAndSendMessage = async () => {
           boltApp.client.chat.postMessage({
             token: process.env.SLACK_BOT_TOKEN,
             channel: member,
-            text: `psssst! <@${birthday.slackId}> har bursdag idag :tada::cake:`
+            text: `Psssst! It's <@${birthday.slackId}> birthday today :tada::cake:`
           });
         });
     });
