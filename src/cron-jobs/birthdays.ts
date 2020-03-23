@@ -9,7 +9,7 @@ const birthdays: Birthday[] = [{
   date: '20.04'
 }];
 
-const getTeamMembers = async () =>
+const getUserGroupMembers = async () =>
   await boltApp.client.usergroups.users.list({
     usergroup: DEVOPS_USER_GROUP,
     token: process.env.SLACK_BOT_TOKEN
@@ -17,7 +17,7 @@ const getTeamMembers = async () =>
     .then(({ users }) => users as string[]);
 
 export const checkIfBirthdayAndSendMessage = async () => {
-  const members = await getTeamMembers();
+  const members = await getUserGroupMembers();
 
   birthdays
     .filter(cur => moment(cur.date, 'DD.MM').isSame(moment().utc(), 'day'))
