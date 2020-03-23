@@ -12,10 +12,13 @@
     "url": "git+https://github.com/sigurdfalk/gje-devops-bot.git"
   },
   "devDependencies": {
+    "@types/node-cron": "2.0.3",
     "tslint": "6.1.0",
     "typescript": "3.8.3"
   },
   "dependencies": {
-    "@slack/bolt": "1.8.0"
+    "@slack/bolt": "1.8.0",
+    "moment": "2.24.0",
+    "node-cron": "2.0.3"
   }
 }
