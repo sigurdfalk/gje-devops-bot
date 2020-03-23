@@ -1,0 +1,20 @@
+{
+  "name": "gje-devops-bot",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "lint": "tslint src/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigurdfalk/gje-devops-bot.git"
+  },
+  "devDependencies": {
+    "tslint": "6.1.0",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "@slack/bolt": "1.8.0"
+  }
+}
